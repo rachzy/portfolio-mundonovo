@@ -1,7 +1,7 @@
 import Logo from "../../../assets/images/outros/logo-cabecalho.png";
 
-import DefaultSection from "../../molecules/Header/HeaderDesktop";
-import MobileSection from "../../molecules/Header/HeaderMobile";
+import DefaultSection from "../../molecules/HeaderDesktop";
+import MobileSection from "../../molecules/HeaderMobile";
 
 interface IOptions {
   label: string;

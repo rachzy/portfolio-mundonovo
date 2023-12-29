@@ -1,9 +1,9 @@
 import "./Header-Desktop.css";
 
-import { IPropsSections } from "../../../organisms/Header";
+import { IPropsSections } from "../../organisms/Header";
 
-import UnderlineIcon from "../../../../assets/images/outros/icone-menu.png";
-import Logo from "../../../../assets/images/outros/logo-cabecalho.png";
+import UnderlineIcon from "../../../assets/images/outros/icone-menu.png";
+import Logo from "../../../assets/images/outros/logo-cabecalho.png";
 
 import { Container } from "@mui/material";
 

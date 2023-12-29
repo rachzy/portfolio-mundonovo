@@ -1,8 +1,8 @@
 import React, { MutableRefObject, useRef } from "react";
-import { IPropsSections } from "../../../organisms/Header";
+import { IPropsSections } from "../../organisms/Header";
 
 import "./Header-Mobile.css";
-import Hamburguer from "../../../atoms/Hamburguer";
+import Hamburguer from "../../atoms/Hamburguer";
 
 const MobileSection: React.FC<IPropsSections> = ({
   options,

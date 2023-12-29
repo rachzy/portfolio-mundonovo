@@ -1,0 +1,172 @@
+/* SLIDER */
+
+div.slider {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 920px) {
+  div.slider {
+    height: 50vh;
+    margin-top: 18vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.slider {
+    height: 30vh;
+  }
+}
+
+/* SLIDES */
+
+div.slides {
+  display: flex;
+
+  width: 100vw;
+  height: 100%;
+}
+
+/* SLIDE */
+
+div.slide {
+  width: 100vw;
+
+  opacity: 0%;
+
+  transition: 0.2s all;
+  position: absolute;
+
+  z-index: -1;
+}
+
+div.slide.active {
+  position: static;
+  opacity: 100%;
+}
+
+div.slide img {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  div.slide {
+    width: 0vw;
+    position: static;
+    height: 100%;
+  }
+
+  div.slide.active {
+    width: 100vw;
+  }
+
+}
+div.slide img {
+  width: 100vw;
+  height: 100%;
+}
+
+/* BUTTONS */
+
+div.slider div.buttons {
+  display: flex;
+
+  width: 80vw;
+  justify-content: space-between;
+
+  position: absolute;
+  z-index: 99;
+}
+
+div.slider div.buttons button {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background: none;
+
+  width: fit-content;
+  height: fit-content;
+
+  color: white;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+
+  font-size: 2vw;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+div.slider div.buttons button img {
+  width: 8vh;
+}
+
+div.slider div.buttons button:hover {
+  transform: scale(1.1);
+}
+
+/* DOTS */
+
+div.dots {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  z-index: 99;
+
+  margin-block: 3vh;
+
+  align-self: flex-end;
+  padding-bottom: 3vh;
+}
+
+div.dots.float {
+  margin-block: 0;
+  position: absolute;
+}
+
+@media screen and (min-width: 920px) {
+  div.dots.float {
+    padding-bottom: 3vw;
+  }
+}
+
+div.dots div.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+
+  margin-inline: 1vh;
+
+  background-color: white;
+
+  border-radius: 50%;
+}
+
+div.dots div.dot.active {
+  background-color: var(--green);
+}
+
+@media screen and (max-width: 520px) {
+  div.slider div.buttons button img {
+    width: 6vh;
+  }
+
+  div.dots div.dot {
+    width: 1vh;
+    height: 1vh;
+  }
+}

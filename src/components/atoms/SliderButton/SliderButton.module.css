@@ -1,0 +1,49 @@
+div.sliderButton {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    border-radius: 4rem;
+
+    overflow: hidden;
+    border: none;
+
+    text-align: center;
+
+    min-width: 16rem;
+    width: 100%;
+
+    margin-top: 5vh;
+    height: 3.5rem;
+
+    transition: 0.2s all;
+    cursor: pointer;
+}
+
+div.sliderButton img {
+    width: 3.5rem;
+    position: absolute;
+    align-self: flex-end;
+    border-radius: 4rem;
+}
+
+@media screen and (max-width: 920px) {
+    div.sliderButton {
+        margin-top: 2vh;
+        height: 2.5rem;
+
+        min-width: auto;
+        width: 100%;
+    }
+
+    div.sliderButton img {
+        width: 2.5rem;
+    }
+}
+
+
+div.sliderButton:hover {
+    transform: scale(1.05);
+}
