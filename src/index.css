@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,700;1,400;1,700;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+:root {
+  --darkblue: #04303B;
+  --rosewood: #B05246;
+  --green: #A8CF45;
+  --lightgray: #A8CF45;
+}
+
+html,body {
+  overflow-x: hidden;
+}
