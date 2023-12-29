@@ -1,11 +1,5 @@
-import HomeSection from "./components/organisms/HomeSection";
-import Header from "./components/organisms/Header";
+import HomePage from "./components/templates/Home";
 
 export default function App() {
-  return (
-    <>
-      <Header />
-      <HomeSection />
-    </>
-  );
+  return <HomePage />;
 }

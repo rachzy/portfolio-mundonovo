@@ -26,7 +26,7 @@ buttonTheme.typography.h5 = {
     fontSize: 20,
   },
   [buttonTheme.breakpoints.up("md")]: {
-    fontSize: 28,
+    fontSize: 24,
   }
 }
 
