@@ -14,23 +14,36 @@ interface IProps {
 
 const containerWrapperTheme = createTheme({
   typography: {
-    h1: {
+    allVariants: {
       fontFamily: "Poppins",
-      color: "rgba(0, 0, 0, 0.2)",
-      textTransform: "uppercase",
-      fontSize: "9vw",
-      fontWeight: "bold",
-      lineHeight: 0.73,
-    },
+    }
   },
 });
+
+containerWrapperTheme.typography.h1 = {
+  [containerWrapperTheme.breakpoints.up("xs")]: {
+    color: "rgba(0, 0, 0, 0.2)",
+    textTransform: "uppercase",
+    fontWeight: "bold",
+    lineHeight: 0.75,
+    fontSize: 48,
+    textAlign: "center",
+  },
+  [containerWrapperTheme.breakpoints.up("sm")]: {
+    fontSize: 64,
+  },
+  [containerWrapperTheme.breakpoints.up("md")]: {
+    fontSize: 128,
+    textAlign: "left",
+  },
+}
 
 export default function ContainerWrapper({ children, title, color }: IProps) {
   function renderTitleBox() {
     if (!title) return null;
     return (
       <Container>
-        <Box sx={{ position: "absolute" }}>
+        <Box sx={{ position: "relative", top: 0, }}>
           <Typography variant="h1">{title}</Typography>
         </Box>
       </Container>
@@ -41,7 +54,7 @@ export default function ContainerWrapper({ children, title, color }: IProps) {
     <Box sx={{ backgroundColor: color }}>
       <ThemeProvider theme={containerWrapperTheme}>
         {renderTitleBox()}
-        <Box paddingTop={10} paddingBottom={5}>{children}</Box>
+        <Box marginTop={-5} paddingBottom={5}>{children}</Box>
       </ThemeProvider>
     </Box>
   );

@@ -27,17 +27,22 @@ div.logo-slider div.sliders {
   overflow: hidden;
 }
 
-div.content {
+@media screen and (min-width: 900px) {
+  
+  div.content.inactive {
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+
+div.content div.paper {
   display: none;
   opacity: 0%;
 
   transition: 0.2s all;
 
   width: 0;
-}
-
-div.content:hover {
-  filter: grayscale(0%);
 }
 
 div.logo-slider a {
@@ -48,7 +53,7 @@ div.logo-slider a.active {
   display: block;
 }
 
-div.content.active {
+div.content.active div.paper {
   display: flex;
   opacity: 100%;
   width: auto;
@@ -80,14 +85,10 @@ div.contentDot.active {
     flex-wrap: wrap;
     justify-content: center;
   }
-  div.content {
+  div.content div.paper {
     opacity: 100%;
     display: flex;
     width: auto;
-  }
-
-  div.content:hover {
-    filter: grayscale(0%);
   }
 
   div.logo-slider .contentDot {

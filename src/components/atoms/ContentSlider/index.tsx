@@ -16,9 +16,8 @@ const ContentSlider: React.FC<IProps> = memo(({ content: content }) => {
       <ContentBox
         key={ct.title}
         className={`content ${
-          index >= firstSlide && index <= firstSlide + 3 && "active"
+          index >= firstSlide && index <= firstSlide + 3 ? "active" : "inactive"
         }`}
-        style={index >= firstSlide && index <= firstSlide + 3 ? {} : {padding: 0}}
         {...ct}
       />
     ));

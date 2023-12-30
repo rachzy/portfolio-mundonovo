@@ -7,11 +7,9 @@ import {
   createTheme,
 } from "@mui/material";
 import { IContent } from "../../../interfaces/Content";
-import { CSSProperties } from "react";
 
 interface IProps extends IContent {
   className?: string;
-  style?: CSSProperties;
 }
 
 export default function ContentBox({
@@ -21,7 +19,6 @@ export default function ContentBox({
   description,
   inline,
   className,
-  style,
   inverse,
 }: IProps) {
   const contentBoxTheme = createTheme({
@@ -43,7 +40,7 @@ export default function ContentBox({
 
   function renderTypography() {
     if (inline) {
-      if(inverse) {
+      if (inverse) {
         return (
           <Typography variant="body2">
             {description} <span style={{ fontWeight: "bold" }}>{title}</span>
@@ -65,9 +62,15 @@ export default function ContentBox({
   }
 
   return (
-    <Grid item xs={12} sm={4} md={3} style={style}>
+    <Grid
+      item
+      xs={12}
+      sm={4}
+      md={3}
+      className={className}
+    >
       <Paper
-        className={className}
+        className={"paper"}
         sx={{
           display: "flex",
           flexDirection: "column",
