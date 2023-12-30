@@ -9,7 +9,7 @@ export default function TeamMembers({ team }: { team: IPerson[] }) {
   }
 
   return (
-    <Box marginTop={5}>
+    <Box marginTop={10}>
       <Title>Nossos executivos:</Title>
       <Grid container display={"flex"} spacing={2} rowGap={4}>
         {renderTeamMembers()}

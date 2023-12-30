@@ -1,0 +1,96 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+div.logo-slider {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  margin-top: -5vh;
+}
+
+div.logo-slider div.sliders {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  overflow: hidden;
+}
+
+div.content {
+  display: none;
+  opacity: 0%;
+
+  transition: 0.2s all;
+
+  width: 0;
+}
+
+div.content:hover {
+  filter: grayscale(0%);
+}
+
+div.logo-slider a {
+  display: none;
+}
+
+div.logo-slider a.active {
+  display: block;
+}
+
+div.content.active {
+  display: flex;
+  opacity: 100%;
+  width: auto;
+
+  animation: fadeIn 0.2s;
+}
+
+div.contentDot {
+  width: 0.75rem;
+  height: 0.75rem;
+
+  margin-inline: 1vh;
+
+  background-color: transparent;
+  border: 0.1rem solid white;
+
+  border-radius: 50%;
+}
+
+div.contentDot.active {
+  background-color: white;
+}
+
+@media screen and (max-width: 780px) {
+  div.logo-slider a {
+    display: block;
+  }
+  div.logo-slider div.sliders {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  div.content {
+    opacity: 100%;
+    display: flex;
+    width: auto;
+  }
+
+  div.content:hover {
+    filter: grayscale(0%);
+  }
+
+  div.logo-slider .contentDot {
+    display: none;
+  }
+}

@@ -1,0 +1,23 @@
+section.banner-section {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 60vh;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+section.banner-section img {
+  width: 50%;
+}
+
+@media screen and (max-width: 920px) {
+  section.banner-section img {
+    width: 95%;
+  }
+}

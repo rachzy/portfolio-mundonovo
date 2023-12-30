@@ -34,6 +34,7 @@ import Number from "../../atoms/Number";
 import FazendasIcon from "../../../assets/images/icons/fazendas-certificadas.png";
 import CursosIcon from "../../../assets/images/icons/cursos-realizados.png";
 import NegociosIcon from "../../../assets/images/icons/negocios-concretizados.png";
+import Video from "../../atoms/Video";
 
 export default function AboutSection() {
   const team: IPerson[] = [
@@ -109,17 +110,19 @@ export default function AboutSection() {
           value={40}
           label={"Fazendas certificadas"}
         />
-        <Number
-          icon={CursosIcon}
-          value={55}
-          label={"Cursos realizados"}
-        />
+        <Number icon={CursosIcon} value={55} label={"Cursos realizados"} />
         <Number
           icon={NegociosIcon}
           value={300}
           label={"Negócios concretizados"}
         />
       </BlueBox>
+      <SectionContainer>
+        <Box>
+          <Title>Conheça mais! Assista ao nosso vídeo institucional</Title>
+          <Video />
+        </Box>
+      </SectionContainer>
     </ThemeProvider>
   );
 }
