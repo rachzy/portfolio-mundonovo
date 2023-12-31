@@ -1,0 +1,8 @@
+div.footerIcon {
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+div.footerIcon:hover {
+    transform: scale(1.05);
+}

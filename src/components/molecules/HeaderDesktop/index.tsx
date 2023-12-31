@@ -1,13 +1,17 @@
 import "./Header-Desktop.css";
 
-import { IPropsSections } from "../../organisms/Header";
-
 import UnderlineIcon from "../../../assets/images/outros/icone-menu.png";
 import Logo from "../../../assets/images/outros/logo-cabecalho.png";
 
 import { Container } from "@mui/material";
+import { IMenuOption } from "../../../interfaces/MenuOption";
 
-const DefaultSection: React.FC<IPropsSections> = ({
+interface IProps {
+  options: IMenuOption[];
+  discriminator: string;
+}
+
+const DefaultSection: React.FC<IProps> = ({
   options,
   discriminator,
 }) => {

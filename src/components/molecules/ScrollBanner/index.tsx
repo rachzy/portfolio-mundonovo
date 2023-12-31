@@ -13,6 +13,7 @@ const ScrollBanner: React.FC<IProps> = ({ banner, children }) => {
       className="banner-section"
       style={{
         backgroundImage: `url(${banner})`,
+        overflow: "hidden",
       }}
     >
       <Container>{children}</Container>

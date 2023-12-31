@@ -1,0 +1,221 @@
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  background-color: var(--azulmain);
+  overflow: hidden;
+}
+#containerImg {
+  top: -2rem;
+  display: flex;
+
+  justify-content: flex-end;
+  width: 100%;
+}
+#imgLogo {
+  width: 10rem;
+  margin-top: -8vh;
+}
+#btnCima {
+  width: 4vh;
+  height: 4vh;
+
+  border: 2vh solid white;
+  border-radius: 4vh;
+  background-color: white;
+
+  object-fit: contain;
+
+  cursor: pointer;
+  transition: 0.2s all;
+
+  margin-top: -3vh;
+  transform: rotate(-90deg);
+}
+
+#btnCima:hover {
+  transform: rotate(-90deg) scale(1.05);
+}
+
+#containerConteudo {
+  color: white;
+  margin-block: 5vh;
+  width: 80%;
+
+  gap: 2vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  margin-left: -5vh;
+}
+
+#containerConteudo div.contact-block {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+
+  flex: 1;
+
+  justify-content: space-between;
+  row-gap: 2vh;
+
+  flex-grow: 1;
+  
+  padding-inline: 4vh;
+  height: 40vh;
+}
+
+#containerConteudo div.contact-block.logos {
+  align-items: center;
+}
+
+#containerConteudo img.companyLogo {
+  width: 30vh;
+}
+
+#containerConteudo div.contact-block div {
+  flex: 1;
+}
+
+#containerConteudo div.contact-block div.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2vh;
+  width: 100%;
+}
+
+#containerConteudo div.contact-block div.logo-container img {
+  width: 15vh;
+}
+
+@media screen and (max-width: 768px) {
+  #containerImg {
+    width: 90vw;
+  }
+  #containerConteudo {
+    width: 90vw;
+    margin-left: -2vh;
+  }
+  #containerConteudo div.contact-block {
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+  }
+}
+
+#containerConteudo span {
+  display: flex;
+  align-items: center;
+
+  white-space: nowrap;
+}
+
+#containerConteudo span a {
+  margin-left: 2vh;
+}
+
+#logoAgrocafe {
+  width: 15rem;
+}
+#fio {
+  height: 3rem;
+}
+#portifolioAssinatura {
+  width: 5rem;
+}
+
+#containerSerafim {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: auto;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  border-radius: 5vh 5vh 0 0;
+
+  box-shadow: 0vh 5vh 10vh 0vh black;
+  background: black;
+}
+#containerSerafim img {
+  width: 10rem;
+}
+
+@media screen and (max-width: 768px) {
+  #containerImg {
+    padding-inline: 3rem;
+    top: -1rem;
+  }
+  #imgLogo {
+    width: 8rem;
+    margin-top: -8vh;
+  }
+  #btnCima {
+    width: 3rem;
+    height: 3rem;
+    margin-top: -4vh;
+  }
+  #containerConteudo {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+  #containerConteudo span {
+    color: white;
+    padding-top: 0.5rem;
+    width: fit-content;
+  }
+  #logoAgrocafe {
+    width: 10rem;
+  }
+  #fio {
+    display: none;
+  }
+  #portifolioAssinatura {
+    width: 4rem;
+  }
+  #containerSerafim {
+    padding-block: 1.5rem 1rem;
+    padding-inline: 1.5rem;
+  }
+  #containerSerafim img {
+    width: 6rem;
+  }
+}
+
+footer div.downline {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding-block: 2vh;
+
+  width: 100vw;
+  background-color: white;
+}
+
+footer div.downline a {
+  width: fit-content;
+}
+
+footer div.downline h3 {
+  font-size: 2.5vh;
+  color: var(--azulmain);
+}
+
+footer div.downline img {
+  margin-left: 3vh;
+  margin-top: 0.5vh;
+  width: 10vh;
+}

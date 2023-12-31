@@ -35,6 +35,10 @@
   border-radius: 2vh;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,body {
   overflow-x: hidden;
 }

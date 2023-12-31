@@ -1,10 +1,15 @@
 import React, { MutableRefObject, useRef } from "react";
-import { IPropsSections } from "../../organisms/Header";
 
 import "./Header-Mobile.css";
 import Hamburguer from "../../atoms/Hamburguer";
+import { IMenuOption } from "../../../interfaces/MenuOption";
 
-const MobileSection: React.FC<IPropsSections> = ({
+interface IProps {
+  options: IMenuOption[];
+  discriminator: string;
+}
+
+const MobileSection: React.FC<IProps> = ({
   options,
   discriminator,
 }) => {
