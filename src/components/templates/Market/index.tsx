@@ -40,6 +40,7 @@ export default function Market() {
 
   return (
     <ContentSection
+      id="mercado"
       title="Mercado"
       subtitle="O que fazemos:"
       color={color}

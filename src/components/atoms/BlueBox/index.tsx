@@ -19,6 +19,11 @@ export default function BlueBox({ children }: { children: React.ReactNode }) {
           xs: 3,
           sm: 7,
         },
+        paddingRight: {
+          xs: 3,
+          sm: 7,
+          md: 14,
+        },
         background: "var(--darkblue)",
         marginTop: 10,
         borderTopLeftRadius: {

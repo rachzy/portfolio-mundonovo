@@ -5,10 +5,10 @@ import Title from "../../atoms/Title";
 import ContentMap from "../../molecules/ContentMap";
 import { IContentSection } from "../../../interfaces/ContentSection";
 
-export default function ContentSection({title, subtitle, color, content}: IContentSection) {
+export default function ContentSection({id, title, subtitle, color, content}: IContentSection) {
   return (
     <ContainerWrapper title={title} color={color}>
-      <SectionContainer>
+      <SectionContainer id={id}>
         <Title color="white">{subtitle}</Title>
         <ContentMap content={content} />
       </SectionContainer>

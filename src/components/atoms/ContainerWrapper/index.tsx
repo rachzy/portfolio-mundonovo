@@ -26,7 +26,7 @@ containerWrapperTheme.typography.h1 = {
     textTransform: "uppercase",
     fontWeight: "bold",
     lineHeight: 0.75,
-    fontSize: 48,
+    fontSize: 30,
     textAlign: "center",
   },
   [containerWrapperTheme.breakpoints.up("sm")]: {

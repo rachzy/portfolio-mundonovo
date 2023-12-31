@@ -98,6 +98,7 @@ export default function Outstandings() {
 
   return (
     <ContentSection
+      id="diferenciais"
       title="Diferenciais"
       subtitle="O que nos tornam únicos:"
       color={sectionColor}

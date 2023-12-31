@@ -70,6 +70,7 @@ export default function Sustainability() {
 
   return (
     <ContentSection
+    id="sustentabilidade"
       title="Sustentabilidade"
       subtitle="O que fazemos:"
       color={sectionColor}

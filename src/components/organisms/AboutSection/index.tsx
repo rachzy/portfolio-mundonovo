@@ -65,7 +65,7 @@ export default function AboutSection() {
 
   return (
     <ThemeProvider theme={aboutTheme}>
-      <SectionContainer sx={{ overflow: "visible" }}>
+      <SectionContainer id="sobre" sx={{ overflow: "visible" }}>
         <Box
           sx={{
             display: "flex",
