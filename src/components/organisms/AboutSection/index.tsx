@@ -90,7 +90,7 @@ export default function AboutSection() {
               justifyContent: { xs: "center", md: "flex-end" },
             }}
           >
-            <Box sx={{ width: { xs: "100%", md: "80%" } }}>
+            <Box sx={{ width: { xs: "100%", md: "80%" } }} simply-fade="left">
               <img
                 style={{ width: "100%" }}
                 src={SectionImage}
@@ -103,7 +103,7 @@ export default function AboutSection() {
       </SectionContainer>
       <BlueBox>
         <Grid item xs={12} sm={6} md={3}>
-          <Title color={"white"}>Conheça alguns dos nossos números:</Title>
+          <Title color={"white"} noMargin>Conheça alguns dos nossos números:</Title>
         </Grid>
         <Number
           icon={FazendasIcon}

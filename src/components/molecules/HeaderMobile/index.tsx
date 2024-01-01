@@ -4,15 +4,15 @@ import "./Header-Mobile.css";
 import Hamburguer from "../../atoms/Hamburguer";
 import { IMenuOption } from "../../../interfaces/MenuOption";
 
+import IconDot from "../../../assets/images/outros/icone-menu.png";
+import { Box } from "@mui/material";
+
 interface IProps {
   options: IMenuOption[];
   discriminator: string;
 }
 
-const MobileSection: React.FC<IProps> = ({
-  options,
-  discriminator,
-}) => {
+const MobileSection: React.FC<IProps> = ({ options, discriminator }) => {
   const menuRef = useRef() as MutableRefObject<HTMLDivElement>;
 
   function handleHamburguerClick() {
@@ -36,13 +36,22 @@ const MobileSection: React.FC<IProps> = ({
   }
 
   function renderOptions() {
-    return options.map((link) => {
+    return options.map((link, index) => {
       return (
-        <li key={`${link.label} ${discriminator}`} onClick={handleOptionClick}>
-          <a href={link.href}>
-            {link.label}
-          </a>
-        </li>
+        <React.Fragment key={`${link.label} ${discriminator}`}>
+          {index !== 0 && (
+            <Box sx={{ width: 48, margin: "auto" }}>
+              <img
+                style={{ width: "100%", opacity: "100%" }}
+                src={IconDot}
+                alt=""
+              />
+            </Box>
+          )}
+          <li onClick={handleOptionClick}>
+            <a href={index === 0 ? "#slider" : link.href}>{link.label}</a>
+          </li>
+        </React.Fragment>
       );
     });
   }

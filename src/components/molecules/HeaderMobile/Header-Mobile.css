@@ -6,7 +6,7 @@ header .mobile-background {
   width: 0%;
   height: 100vh;
 
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(4, 122, 2, 0.611);
 
   justify-content: flex-end;
 
@@ -58,11 +58,9 @@ header .mobile-menu {
 
   align-items: center;
 
-  padding-block: 5vh 20vh;
-
   width: 0%;
 
-  overflow-y: scroll;
+  overflow: hidden;
 }
 
 header .mobile-background.active .mobile-menu {

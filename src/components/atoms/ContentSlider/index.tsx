@@ -1,62 +1,41 @@
-import { useState, useCallback, memo } from "react";
+import { useCallback, memo } from "react";
 import "./LogoSlider.css";
 import { IContent } from "../../../interfaces/Content";
 import ContentBox from "../ContentBox";
-import { Grid } from "@mui/material";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import { Box } from "@mui/material";
 
 interface IProps {
   content: IContent[];
 }
 
 const ContentSlider: React.FC<IProps> = memo(({ content: content }) => {
-  const [firstSlide, setFirstSlide] = useState(0);
-
   const renderContent = useCallback(() => {
-    return content.map((ct, index) => (
-      <ContentBox
-        key={ct.title}
-        className={`content ${
-          index >= firstSlide && index <= firstSlide + 3 ? "active" : "inactive"
-        }`}
-        {...ct}
-      />
+    return content.map((ct) => (
+      <SwiperSlide style={{padding: 4}} key={ct.title}>
+        <ContentBox key={ct.title} {...ct} />
+      </SwiperSlide>
     ));
-  }, [content, firstSlide]);
-
-  function handleDotMouseOuver(index: number) {
-    setFirstSlide(index * 4);
-  }
-
-  const renderDots = useCallback(() => {
-    return content.map((ct, index) => {
-      if (index % 4 !== 0) return null;
-      return (
-        <div
-          key={ct.title}
-          className={`contentDot ${index === firstSlide && "active"}`}
-          onMouseOver={handleDotMouseOuver.bind(this, index / 4)}
-        ></div>
-      );
-    });
-  }, [content, firstSlide]);
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setFirstSlide((currentValue) => {
-  //       if (currentValue + 4 >= content.length - 1) return 0;
-  //       return currentValue + 4;
-  //     });
-  //   }, 4000);
-  //   return () => clearTimeout(timer);
-  // }, [content, firstSlide]);
+  }, [content]);
 
   return (
-    <div className="logo-slider">
-      <Grid container spacing={4} marginY={4}>
+    <Box sx={{ marginY: 5 }}>
+      <Swiper
+        slidesPerView={4}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+      >
         {renderContent()}
-      </Grid>
-      <div className="dots">{renderDots()}</div>
-    </div>
+      </Swiper>
+    </Box>
   );
 });
 

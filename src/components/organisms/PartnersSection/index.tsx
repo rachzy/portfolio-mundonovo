@@ -16,6 +16,7 @@ partnersSectionTheme.typography.h2 = {
   [partnersSectionTheme.breakpoints.up("xs")]: {
     color: "white",
     fontSize: 24,
+    lineHeight: 1.2,
   },
   [partnersSectionTheme.breakpoints.up("sm")]: {
     color: "white",

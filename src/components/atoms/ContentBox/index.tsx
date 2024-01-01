@@ -1,6 +1,5 @@
 import {
   Box,
-  Grid,
   Paper,
   ThemeProvider,
   Typography,
@@ -18,7 +17,6 @@ export default function ContentBox({
   title,
   description,
   inline,
-  className,
   inverse,
 }: IProps) {
   const contentBoxTheme = createTheme({
@@ -62,35 +60,27 @@ export default function ContentBox({
   }
 
   return (
-    <Grid
-      item
-      xs={12}
-      sm={4}
-      md={3}
-      className={className}
+    <Paper
+      className={"paper"}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: 1,
+        height: 400,
+        borderRadius: 5,
+      }}
+      elevation={12}
     >
-      <Paper
-        className={"paper"}
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: 1,
-          height: 400,
-          borderRadius: 5,
-        }}
-        elevation={12}
-      >
-        <ThemeProvider theme={contentBoxTheme}>
-          <Box sx={{ width: 70 }}>
-            <img style={{ width: "100%" }} src={icon} alt="" />
-          </Box>
-          <Box sx={{ width: "100%", padding: 1, overflowX: "hidden" }}>
-            {renderTypography()}
-          </Box>
-        </ThemeProvider>
-      </Paper>
-    </Grid>
+      <ThemeProvider theme={contentBoxTheme}>
+        <Box sx={{ width: 70 }}>
+          <img style={{ width: "100%" }} src={icon} alt="" />
+        </Box>
+        <Box sx={{ width: "100%", padding: 1, overflowX: "hidden" }}>
+          {renderTypography()}
+        </Box>
+      </ThemeProvider>
+    </Paper>
   );
 }

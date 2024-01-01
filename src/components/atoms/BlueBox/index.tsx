@@ -19,6 +19,10 @@ export default function BlueBox({ children }: { children: React.ReactNode }) {
           xs: 3,
           sm: 7,
         },
+        paddingY: {
+          xs: 10,
+          sm: 7,
+        },
         paddingRight: {
           xs: 3,
           sm: 7,

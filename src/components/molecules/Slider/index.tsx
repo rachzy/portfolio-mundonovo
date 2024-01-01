@@ -6,10 +6,11 @@ interface IProps {
   floatingDots?: boolean;
 }
 
-// import SliderDireita from "../../assets/other/slider-direita.png";
-// import SliderEsquerda from "../../assets/other/slider-esquerda.png";
+import SliderDireita from "../../../assets/images/icons/slider-right.png";
+import SliderEsquerda from "../../../assets/images/icons/slider-left.png";
 
 import SliderTextBox from "../../atoms/SliderTextBox";
+import { Box, Container } from "@mui/material";
 
 const Slider: React.FC<IProps> = ({ images, floatingDots }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -21,12 +22,12 @@ const Slider: React.FC<IProps> = ({ images, floatingDots }) => {
     });
   }, [images.length]);
 
-  // const handlePreviousSlideButtonClick = useCallback(() => {
-  //   setCurrentSlide((currentValue) => {
-  //     if (currentValue === 0) return images.length - 1;
-  //     return currentValue - 1;
-  //   });
-  // }, [images.length]);
+  const handlePreviousSlideButtonClick = useCallback(() => {
+    setCurrentSlide((currentValue) => {
+      if (currentValue === 0) return images.length - 1;
+      return currentValue - 1;
+    });
+  }, [images.length]);
 
   function renderImages() {
     return images.map((image, index) => {
@@ -47,6 +48,7 @@ const Slider: React.FC<IProps> = ({ images, floatingDots }) => {
         <div
           key={image}
           className={`dot ${index === currentSlide && "active"}`}
+          onClick={() => setCurrentSlide(index)}
         />
       );
     });
@@ -58,15 +60,19 @@ const Slider: React.FC<IProps> = ({ images, floatingDots }) => {
 
   return (
     <>
-      <div className="slider">
-        {/* <div className="buttons">
-          <button onClick={handlePreviousSlideButtonClick}>
-            <img src={SliderEsquerda} />
-          </button>
-          <button onClick={handleNextSlideButtonClick}>
-            <img src={SliderDireita} />
-          </button>
-        </div> */}
+      <div className="slider" id="slider">
+        <Container sx={{ position: "absolute" }}>
+          <Box sx={{ display: { xs: "block", sm: "none" }, width: "100%" }}>
+            <div className="buttons">
+              <button onClick={handlePreviousSlideButtonClick}>
+                <img src={SliderEsquerda} />
+              </button>
+              <button onClick={handleNextSlideButtonClick}>
+                <img src={SliderDireita} />
+              </button>
+            </div>
+          </Box>
+        </Container>
         {floatingDots && <div className="dots float">{renderDots()}</div>}
 
         <SliderTextBox />

@@ -20,11 +20,12 @@ const textBoxTheme = createTheme({
 textBoxTheme.typography.h2 = {
   [textBoxTheme.breakpoints.up("xs")]: {
     fontSize: 28,
-    color: "var(--darkblue)",
+    color: "white",
+    textShadow: "1px 0 black",
+    lineHeight: 1.2,
   },
   [textBoxTheme.breakpoints.up("sm")]: {
     fontSize: 36,
-    color: "white",
   },
   [textBoxTheme.breakpoints.up("md")]: {
     fontSize: 48,
@@ -32,9 +33,12 @@ textBoxTheme.typography.h2 = {
 };
 
 textBoxTheme.typography.h5 = {
+  [textBoxTheme.breakpoints.up("xs")]: {
+    color: "white",
+    textShadow: "1px 0 black",
+  },
   [textBoxTheme.breakpoints.up("sm")]: {
     fontSize: 18,
-    color: "white",
   },
   [textBoxTheme.breakpoints.up("md")]: {
     fontSize: 24,
@@ -45,7 +49,7 @@ export default function SliderTextBox() {
   return (
     <ThemeProvider theme={textBoxTheme}>
       <Box
-        sx={{ display: { xs: "none", sm: "flex" } }}
+        sx={{ display: "flex", left: { xs: "none", sm: 0 }, alignSelf: "center" }}
         className={classes.textBox}
       >
         <Typography variant="h2">
@@ -55,7 +59,12 @@ export default function SliderTextBox() {
         <Typography variant="h5">
           para um Futuro de <br /> Negócios Sustentáveis!
         </Typography>
-        <SliderButton icon={WhatsAppIcon}>Fale Conosco</SliderButton>
+        <SliderButton
+          icon={WhatsAppIcon}
+          href="https://api.whatsapp.com/send?phone=553438313667&text=Ol%C3%A1!"
+        >
+          Fale Conosco
+        </SliderButton>
       </Box>
     </ThemeProvider>
   );

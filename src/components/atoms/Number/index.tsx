@@ -7,6 +7,8 @@ import {
 } from "@mui/material";
 import { INumber } from "../../../interfaces/Number";
 
+import CountUp from "react-countup";
+
 const numberTheme = createTheme({
   typography: {
     allVariants: {
@@ -68,7 +70,7 @@ export default function Number({ icon, value, label }: INumber) {
         >
           <img src={icon} style={{ width: 60 }} alt="" />
           <Box>
-            <Typography variant="h3">+{value}</Typography>
+            <Typography variant="h3"><CountUp end={value} duration={10} enableScrollSpy prefix="+"  /></Typography>
             <Typography variant="h5">{label}</Typography>
           </Box>
         </Box>

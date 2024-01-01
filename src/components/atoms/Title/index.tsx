@@ -30,13 +30,20 @@ titleTheme.typography.h3 = {
 export default function Title({
   children,
   color,
+  noMargin,
 }: {
   children: React.ReactNode;
   color?: string;
+  noMargin?: boolean;
 }) {
   return (
     <ThemeProvider theme={titleTheme}>
-      <Typography style={{color}} variant="h3" component="h1" marginY={4}>
+      <Typography
+        style={{ color }}
+        variant="h3"
+        component="h1"
+        marginTop={noMargin ? 0 : 4}
+      >
         {children}
       </Typography>
     </ThemeProvider>

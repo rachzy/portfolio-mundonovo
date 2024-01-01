@@ -31,7 +31,7 @@ const footerTheme = createTheme({
     h6: {
       color: "var(--darkblue)",
       fontWeight: 500,
-      fontSize: 16,
+      fontSize: 12,
     },
   },
 });
@@ -98,7 +98,7 @@ const FooterComponent = ({ addresses, contacts }: IProps) => {
             </Box>
           </Box>
         </Container>
-        <Box sx={{ width: "100%", background: "white", textAlign: "center", paddingY: 4, marginTop: 10, }}>
+        <Box sx={{ width: "100%", background: "white", textAlign: "center", paddingY: 2, marginTop: 10, }}>
           <Typography
             variant={"h6"}
             sx={{
@@ -111,7 +111,7 @@ const FooterComponent = ({ addresses, contacts }: IProps) => {
             }}
           >
             © 2024 Mundo Novo Café • Mercado e Sustentabilidade - Desenvolvido
-            por: <img style={{width: 80}} src={LogoPortfolio} />
+            por: <img style={{width: 55}} src={LogoPortfolio} />
           </Typography>
         </Box>
       </ThemeProvider>

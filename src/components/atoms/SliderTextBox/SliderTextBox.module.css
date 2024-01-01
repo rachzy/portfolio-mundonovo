@@ -3,7 +3,6 @@
 div.textBox {
   flex-direction: column;
 
-  left: 0;
   position: absolute;
 
   padding-left: 8vw;

@@ -61,7 +61,12 @@ div.content.active div.paper {
   animation: fadeIn 0.2s;
 }
 
-div.contentDot {
+div.swiper-pagination-bullets {
+  position: static !important;
+  margin-top: 5vh;
+}
+
+span.swiper-pagination-bullet {
   width: 0.75rem;
   height: 0.75rem;
 
@@ -69,11 +74,12 @@ div.contentDot {
 
   background-color: transparent;
   border: 0.1rem solid white;
+  border-color: white;
 
   border-radius: 50%;
 }
 
-div.contentDot.active {
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: white;
 }
 

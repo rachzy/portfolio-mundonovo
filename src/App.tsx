@@ -6,8 +6,13 @@ import Sustainability from "./components/templates/Sustainability";
 import Partners from "./components/templates/Partners";
 import Header from "./components/templates/Header";
 import Footer from "./components/templates/Footer";
+import { useEffect } from "react";
+import { SimplyFade } from 'simply-fades';
 
 export default function App() {
+  useEffect(() => {
+    new SimplyFade();
+  }, [])
   return (
     <>
       <Header />

@@ -41,6 +41,7 @@ export default function PersonCard({
   description,
 }: IPerson) {
   const [active, setActive] = useState(false);
+  const [mouseOver, setMouseOver] = useState(false);
 
   function handleTextClick() {
     setActive((currentValue) => !currentValue);
@@ -51,24 +52,39 @@ export default function PersonCard({
       <ThemeProvider theme={personCardTheme}>
         <Box sx={{ border: "none", borderRadius: 0 }}>
           <Box
+            onClick={handleTextClick}
+            onMouseEnter={() => setMouseOver(true)}
+            onMouseLeave={() => setMouseOver(false)}
             sx={{
               display: "flex",
               flexDirection: "column",
               justifyContent: "flex-end",
-              backgroundImage: `url(${image})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
               height: 360,
               overflow: "hidden",
               borderRadius: 6,
               marginBottom: 1,
+              cursor: "pointer",
+              transition: "0.2s all",
             }}
           >
             <Box
               sx={{
                 width: "100%",
-                background: "rgba(4, 48, 59, 0.9)",
+                height: "100%",
+                backgroundImage: `url(${image})`,
+                backgroundRepeat: "no-repeat",
+                transition: "0.2s all",
+                backgroundSize: "cover",
+                transform: mouseOver ? "scale(1.1)" : "none",
+              }}
+            />
+            <Box
+              sx={{
+                position: "relative",
+                width: "100%",
+                background: "rgba(4, 48, 59, 1)",
                 padding: 2,
+                zIndex: 1,
               }}
             >
               <Typography variant="body2">{name}</Typography>
@@ -79,6 +95,7 @@ export default function PersonCard({
                 alignSelf: "flex-end",
                 marginBottom: -5,
                 marginRight: 2,
+                zIndex: 2,
               }}
             >
               <img style={{ width: "80%" }} src={HalfCircle} alt="" />
