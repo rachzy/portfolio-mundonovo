@@ -6,8 +6,7 @@ interface IProps {
   floatingDots?: boolean;
 }
 
-import SliderDireita from "../../../assets/images/icons/slider-right.png";
-import SliderEsquerda from "../../../assets/images/icons/slider-left.png";
+import SliderIcon from "../../../assets/images/icons/slider.png";
 
 import SliderTextBox from "../../atoms/SliderTextBox";
 import { Box, Container } from "@mui/material";
@@ -66,10 +65,16 @@ const Slider: React.FC<IProps> = ({ images, floatingDots }) => {
           <Box sx={{ display: { xs: "block", sm: "none" }, width: "100%" }}>
             <div className="buttons">
               <button onClick={handlePreviousSlideButtonClick}>
-                <img src={SliderEsquerda} />
+                <img
+                  src={SliderIcon}
+                  style={{
+                    transform: "scaleX(-1)",
+                    WebkitTransform: "scaleX(-1)",
+                  }}
+                />
               </button>
               <button onClick={handleNextSlideButtonClick}>
-                <img src={SliderDireita} />
+                <img src={SliderIcon} />
               </button>
             </div>
           </Box>

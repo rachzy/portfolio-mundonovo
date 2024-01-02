@@ -42,7 +42,13 @@ const MobileSection: React.FC<IProps> = ({ options, discriminator }) => {
           {index !== 0 && (
             <Box sx={{ width: 48, margin: "auto" }}>
               <img
-                style={{ width: "100%", opacity: "100%" }}
+                style={{
+                  width: "100%",
+                  opacity: "100%",
+                  filter: "brightness(0) invert(1)",
+                  WebkitFilter: "brightness(0) invert(1)",
+                  msFilter: "brightness(0) invert(1)",
+                }}
                 src={IconDot}
                 alt=""
               />

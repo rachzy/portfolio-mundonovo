@@ -53,7 +53,7 @@ const FooterComponent = ({ addresses, contacts }: IProps) => {
         <Container>
           <Box
             sx={{
-              display: "flex",
+              display: { xs: "none", sm: "flex" },
               width: "100%",
               justifyContent: "flex-end",
               alignItems: "center",

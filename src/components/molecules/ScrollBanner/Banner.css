@@ -16,21 +16,9 @@ section.banner-section img {
   width: 50%;
 }
 
-@media screen and (max-width: 1024px) {
-  section.banner-section img {
-    width: 95%;
-  }
-
-  section.banner-section:after {
-    content: "";
-    width: 100%;
-    background-position: inherit;
-    background-image: inherit;
-    background-size: inherit;
-    background-attachment: inherit;
-    background-repeat: inherit;
-    position: fixed;
-    top: 0;
-    z-index: -1;
+@media screen and (max-width: 600px) {
+  section.banner-section {
+    background-attachment: unset;
+    background-position: 50%;
   }
 }
