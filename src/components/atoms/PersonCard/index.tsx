@@ -109,7 +109,9 @@ export default function PersonCard({
                   xs: 1,
                   sm: 0,
                 },
+                cursor: active ? "text" : "pointer",
               }}
+              onClick={handleTextClick}
             >
               {jobTitle}
             </Typography>

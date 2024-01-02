@@ -6,7 +6,7 @@ header .mobile-background {
   width: 0%;
   height: 100vh;
 
-  background-color: rgba(4, 122, 2, 0.611);
+  background-color: rgba(0, 0, 0, 0.8);
 
   justify-content: flex-end;
 
@@ -41,7 +41,6 @@ div.hamburguer-box {
   z-index: 1000;
   cursor: pointer;
 
-  background-color: var(--azulmain);
   padding: 1.5vh;
   border-radius: 3vh;
 
@@ -88,7 +87,7 @@ header .mobile-menu a {
   font-size: 2.5vh;
   width: 0;
 
-  color: white;
+  color: var(--darkblue);
 }
 
 header .mobile-menu img {
@@ -116,8 +115,7 @@ header .mobile-menu nav.options li {
   width: 80%;
   text-align: center;
 
-  background: var(--darkblue);
-  color: white;
+  background: white;
   padding: 1.5vh 1vh;
 
   border-radius: 1vh;
@@ -201,6 +199,7 @@ header .mobile-menu nav.options li:hover > ul.sub-options {
     padding-block: 3vh;
 
     background-color: var(--darkblue);
+    height: 18vh;
     z-index: 1000;
     transition: 0.4s all;
   }

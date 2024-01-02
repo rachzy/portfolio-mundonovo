@@ -1,9 +1,0 @@
-/* TEXT */
-
-div.textBox {
-  flex-direction: column;
-
-  position: absolute;
-
-  padding-left: 8vw;
-}

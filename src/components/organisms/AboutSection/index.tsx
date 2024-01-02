@@ -76,7 +76,13 @@ export default function AboutSection() {
         >
           <Box sx={{ flex: 1 }}>
             <Title>Impulsionando atitudes</Title>
-            <Typography variant="body1" sx={{ marginTop: { xs: 4, sm: 1 } }}>
+            <Typography
+              variant="body1"
+              sx={{
+                marginTop: { xs: 4, sm: 1 },
+                textAlign: { xs: "center", sm: "start" },
+              }}
+            >
               em busca das <b>melhores oportunidades</b> para gerar valor aos
               produtos dos nossos clientes, oferecendo{" "}
               <b>conhecimento, suporte</b> e <b>novas ferramentas</b> para uma{" "}
@@ -103,7 +109,9 @@ export default function AboutSection() {
       </SectionContainer>
       <BlueBox>
         <Grid item xs={12} sm={6} md={3}>
-          <Title color={"white"} noMargin>Conheça alguns dos nossos números:</Title>
+          <Title color={"white"} noMargin>
+            Conheça alguns dos nossos números:
+          </Title>
         </Grid>
         <Number
           icon={FazendasIcon}

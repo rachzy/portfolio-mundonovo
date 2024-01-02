@@ -20,6 +20,7 @@ div.slider {
 @media screen and (max-width: 600px) {
   div.slider {
     height: 30vh;
+    margin-top: 0vh;
   }
 }
 
@@ -67,7 +68,6 @@ div.slide img {
   div.slide.active {
     width: 100vw;
   }
-
 }
 div.slide img {
   width: 100vw;

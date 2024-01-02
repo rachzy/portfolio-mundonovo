@@ -60,6 +60,7 @@ const Slider: React.FC<IProps> = ({ images, floatingDots }) => {
 
   return (
     <>
+      <SliderTextBox mobile />
       <div className="slider" id="slider">
         <Container sx={{ position: "absolute" }}>
           <Box sx={{ display: { xs: "block", sm: "none" }, width: "100%" }}>

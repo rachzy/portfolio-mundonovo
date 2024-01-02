@@ -75,6 +75,7 @@ span.swiper-pagination-bullet {
   background-color: transparent;
   border: 0.1rem solid white;
   border-color: white;
+  opacity: 100%;
 
   border-radius: 50%;
 }

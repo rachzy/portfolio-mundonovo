@@ -1,5 +1,3 @@
-import classes from "./SliderTextBox.module.css";
-
 import { Box, ThemeProvider, Typography, createTheme } from "@mui/material";
 import SliderButton from "../SliderButton";
 
@@ -20,11 +18,11 @@ const textBoxTheme = createTheme({
 textBoxTheme.typography.h2 = {
   [textBoxTheme.breakpoints.up("xs")]: {
     fontSize: 28,
-    color: "white",
-    textShadow: "1px 0 black",
+    color: "var(--darkblue)",
     lineHeight: 1.2,
   },
   [textBoxTheme.breakpoints.up("sm")]: {
+    color: "white",
     fontSize: 36,
   },
   [textBoxTheme.breakpoints.up("md")]: {
@@ -34,10 +32,12 @@ textBoxTheme.typography.h2 = {
 
 textBoxTheme.typography.h5 = {
   [textBoxTheme.breakpoints.up("xs")]: {
-    color: "white",
-    textShadow: "1px 0 black",
+    color: "var(--darkblue)",
+    fontWeight: 400,
+    fontSize: 20,
   },
   [textBoxTheme.breakpoints.up("sm")]: {
+    color: "white",
     fontSize: 18,
   },
   [textBoxTheme.breakpoints.up("md")]: {
@@ -45,18 +45,38 @@ textBoxTheme.typography.h5 = {
   },
 };
 
-export default function SliderTextBox() {
+export default function SliderTextBox({ mobile }: { mobile?: boolean }) {
   return (
     <ThemeProvider theme={textBoxTheme}>
       <Box
-        sx={{ display: "flex", left: { xs: "none", sm: 0 }, alignSelf: "center" }}
-        className={classes.textBox}
+        sx={{
+          display: {
+            xs: mobile ? "flex" : "none",
+            sm: mobile ? "none" : "flex",
+          },
+          flexDirection: "column",
+          position: { xs: "static", sm: "absolute" },
+          left: { xs: "none", sm: 0 },
+          alignSelf: "center",
+          marginTop: { xs: "18vh", sm: 0 },
+          width: { xs: "100%", sm: "auto" },
+          justifyContent: { xs: "center", sm: "flex-start" },
+          background: { xs: "var(--green)", sm: "transparent" },
+          height: { xs: "25vh", sm: "auto" },
+          paddingLeft: { xs: 0, sm: "8vw" },
+        }}
       >
-        <Typography variant="h2">
+        <Typography
+          variant="h2"
+          sx={{ textAlign: { xs: "center", sm: "start" } }}
+        >
           Inovações e <br />
           Parcerias
         </Typography>
-        <Typography variant="h5">
+        <Typography
+          variant="h5"
+          sx={{ textAlign: { xs: "center", sm: "start" } }}
+        >
           para um Futuro de <br /> Negócios Sustentáveis!
         </Typography>
         <SliderButton

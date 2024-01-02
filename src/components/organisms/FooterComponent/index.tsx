@@ -62,8 +62,10 @@ const FooterComponent = ({ addresses, contacts }: IProps) => {
           >
             <FooterIcon src={FooterCima} onClick={handleScrollUpButtonClick} />
           </Box>
-          <Box marginTop={16}>
-            <Title>Contato:</Title>
+          <Box marginTop={8}>
+            <Box sx={{ marginY: 6 }}>
+              <Title>Contato:</Title>
+            </Box>
             <Grid container spacing={6}>
               {renderAddressLabels()}
             </Grid>
@@ -98,7 +100,15 @@ const FooterComponent = ({ addresses, contacts }: IProps) => {
             </Box>
           </Box>
         </Container>
-        <Box sx={{ width: "100%", background: "white", textAlign: "center", paddingY: 2, marginTop: 10, }}>
+        <Box
+          sx={{
+            width: "100%",
+            background: "white",
+            textAlign: "center",
+            paddingY: 2,
+            marginTop: 10,
+          }}
+        >
           <Typography
             variant={"h6"}
             sx={{
@@ -111,7 +121,10 @@ const FooterComponent = ({ addresses, contacts }: IProps) => {
             }}
           >
             © 2024 Mundo Novo Café • Mercado e Sustentabilidade - Desenvolvido
-            por: <img style={{width: 55}} src={LogoPortfolio} />
+            por:{" "}
+            <a href="https://agenciaportfolio.com.br/" target="_blank">
+              <img style={{ width: 55 }} src={LogoPortfolio} />
+            </a>
           </Typography>
         </Box>
       </ThemeProvider>
