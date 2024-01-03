@@ -70,6 +70,8 @@ header .mobile-menu nav.options {
   width: 100%;
   margin-top: 20vh;
 
+  max-height: 100%;
+  overflow-y: scroll;
   transition: 0.3s all;
 }
 
