@@ -40,7 +40,7 @@ const MobileSection: React.FC<IProps> = ({ options, discriminator }) => {
       return (
         <React.Fragment key={`${link.label} ${discriminator}`}>
           {index !== 0 && (
-            <Box sx={{ width: 48, margin: "auto" }}>
+            <Box sx={{ width: 48 }}>
               <img
                 style={{
                   width: "100%",

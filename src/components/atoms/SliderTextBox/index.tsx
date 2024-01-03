@@ -58,7 +58,7 @@ export default function SliderTextBox({ mobile }: { mobile?: boolean }) {
           position: { xs: "static", sm: "absolute" },
           left: { xs: "none", sm: 0 },
           alignSelf: "center",
-          marginTop: { xs: "18vh", sm: 0 },
+          marginTop: { xs: "12vh", sm: 0 },
           width: { xs: "100%", sm: "auto" },
           justifyContent: { xs: "center", sm: "flex-start" },
           background: { xs: "var(--green)", sm: "transparent" },
