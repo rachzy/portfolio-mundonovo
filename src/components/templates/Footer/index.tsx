@@ -10,35 +10,28 @@ import EmailIcon from "../../../assets/images/icons/e-mail.png";
 export default function Footer() {
   const addresses: IAddress[] = [
     {
-      title: "Região da Canastra",
+      title: "Cerrado Mineiro",
       description: [
-        "Avenida Padre Murilo de Almeida Conceição, 249",
-        "Loja 1 • Centro • São Roque de Minas/MG",
+        "Patrocínio, MG",
+        "34 9 9948-5118"
+      ],
+    },
+    {
+      title: "Serra da Canastra:",
+      description: [
+        "Avenida Padre Murilo de Almeida Conceição, 249 - Loja 1",
+        "Centro - São Roque de Minas/MG ",
         "CEP 37928-000",
+        "37 9 9964-7717"
       ],
     },
     {
-      title: "Região do Cerrado Mineiro",
+      title: "Sudoeste de Minas I Alta Mogiana:",
       description: [
-        "Endereço aqui neste local",
-        "Bairro • Cidade/MG",
-        "CEP 000000-000",
-      ],
-    },
-    {
-      title: "Região da Alto Mogiana",
-      description: [
-        "Endereço aqui neste local",
-        "Bairro • Cidade/MG",
-        "CEP 000000-000",
-      ],
-    },
-    {
-      title: "Região do Sudoeste de Minas",
-      description: [
-        "Endereço aqui neste local",
-        "Bairro • Cidade/MG",
-        "CEP 000000-000",
+        "Avenida Oliveira Rezende, 1097 ",
+        "Vila Operária - São Sebastião do Paraíso/MG",
+        "CEP 37.950-282",
+        "35 9 9901-1125"
       ],
     },
   ];
@@ -54,11 +47,11 @@ export default function Footer() {
     },
     {
       icon: WhatsappIcon,
-      href: "https://api.whatsapp.com/send?phone=553438313667&text=Ol%C3%A1!",
+      href: "https://api.whatsapp.com/send?phone=5535999011125&text=Ol%C3%A1!",
     },
     {
       icon: EmailIcon,
-      href: "mundonovo@mundonovocafe.com.br",
+      href: "mailto:qualidade@mundonovocafe.com.br",
     },
   ];
 

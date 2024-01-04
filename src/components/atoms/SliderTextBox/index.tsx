@@ -81,7 +81,7 @@ export default function SliderTextBox({ mobile }: { mobile?: boolean }) {
         </Typography>
         <SliderButton
           icon={WhatsAppIcon}
-          href="https://api.whatsapp.com/send?phone=553438313667&text=Ol%C3%A1!"
+          href="https://api.whatsapp.com/send?phone=5535999011125&text=Ol%C3%A1!"
         >
           Fale Conosco
         </SliderButton>

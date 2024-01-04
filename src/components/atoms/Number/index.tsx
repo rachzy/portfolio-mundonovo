@@ -30,6 +30,7 @@ numberTheme.typography.h3 = {
     textAlign: "center",
   },
   [numberTheme.breakpoints.up("sm")]: {
+    fontSize: 32,
     textAlign: "right",
   },
 };

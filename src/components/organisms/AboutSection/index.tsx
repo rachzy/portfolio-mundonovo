@@ -32,7 +32,8 @@ import TeamMembers from "../../molecules/TeamMembers";
 import Number from "../../atoms/Number";
 
 import FazendasIcon from "../../../assets/images/icons/fazendas-certificadas.png";
-import CursosIcon from "../../../assets/images/icons/cursos-realizados.png";
+import HectaresIcon from "../../../assets/images/icons/hectares-certificados.png";
+import SacasIcon from "../../../assets/images/icons/sacas-certificadas.png";
 import NegociosIcon from "../../../assets/images/icons/negocios-concretizados.png";
 import Video from "../../atoms/Video";
 
@@ -115,13 +116,22 @@ export default function AboutSection() {
         </Grid>
         <Number
           icon={FazendasIcon}
-          value={40}
+          value={205}
           label={"Fazendas certificadas"}
         />
-        <Number icon={CursosIcon} value={55} label={"Cursos realizados"} />
+        <Number
+          icon={HectaresIcon}
+          value={300000}
+          label={"Hectares Certificados"}
+        />
+        <Number
+          icon={SacasIcon}
+          value={1000070}
+          label={"Sacas de cafés certificados"}
+        />
         <Number
           icon={NegociosIcon}
-          value={300}
+          value={1021}
           label={"Negócios concretizados"}
         />
       </BlueBox>

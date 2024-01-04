@@ -70,7 +70,7 @@ header .mobile-menu nav.options {
   display: flex;
   flex-direction: column;
 
-  justify-content: center;
+  padding-top: 14dvh;
   align-items: center;
 
   width: 100%;
