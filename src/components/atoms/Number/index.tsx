@@ -69,9 +69,13 @@ export default function Number({ icon, value, label }: INumber) {
             },
           }}
         >
-          <img src={icon} style={{ width: 60 }} alt="" />
-          <Box>
-            <Typography variant="h3"><CountUp end={value} duration={10} enableScrollSpy prefix="+"  /></Typography>
+          <Box sx={{ flex: 1, display: "flex", alignItems: "center" }}>
+            <img src={icon} style={{ maxWidth: 70, maxHeight: 60 }} alt="" />
+          </Box>
+          <Box sx={{ flex: 1 }}>
+            <Typography variant="h3">
+              <CountUp end={value} duration={10} enableScrollSpy prefix="+" />
+            </Typography>
             <Typography variant="h5">{label}</Typography>
           </Box>
         </Box>

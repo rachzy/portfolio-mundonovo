@@ -10,19 +10,19 @@ import EmailIcon from "../../../assets/images/icons/e-mail.png";
 export default function Footer() {
   const addresses: IAddress[] = [
     {
-      title: "Cerrado Mineiro",
-      description: [
-        "Patrocínio, MG",
-        "34 9 9948-5118"
-      ],
-    },
-    {
       title: "Serra da Canastra:",
       description: [
         "Avenida Padre Murilo de Almeida Conceição, 249 - Loja 1",
         "Centro - São Roque de Minas/MG ",
         "CEP 37928-000",
         "37 9 9964-7717"
+      ],
+    },
+    {
+      title: "Cerrado Mineiro",
+      description: [
+        "Patrocínio, MG",
+        "34 9 9948-5118"
       ],
     },
     {
