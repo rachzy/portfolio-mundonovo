@@ -90,7 +90,7 @@ export default function Number({ icon, value, label }: INumber) {
                 duration={10}
                 enableScrollSpy
                 prefix="+"
-                formattingFn={(number) => number.toLocaleString()}
+                formattingFn={(number) => number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
               />
             </Typography>
             <Typography variant="h5">{label}</Typography>
