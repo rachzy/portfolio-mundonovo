@@ -74,10 +74,10 @@ export default function ContentBox({
       elevation={12}
     >
       <ThemeProvider theme={contentBoxTheme}>
-        <Box sx={{ maxWidth: 75, maxHeight: 60 }}>
-          <img style={{ width: "100%", height: "100%", }} src={icon} alt="" />
+        <Box>
+          <img style={{width: "120px", height: "120px"}}src={icon} alt="" />
         </Box>
-        <Box sx={{ width: "100%", padding: 1, overflowX: "hidden" }}>
+        <Box sx={{ width: "100%", padding: 1, overflowX: "hidden", marginTop: "-30px", }}>
           {renderTypography()}
         </Box>
       </ThemeProvider>

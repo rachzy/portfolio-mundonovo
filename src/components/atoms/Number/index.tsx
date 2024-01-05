@@ -69,12 +69,29 @@ export default function Number({ icon, value, label }: INumber) {
             },
           }}
         >
-          <Box sx={{ flex: 1, display: "flex", alignItems: "center" }}>
-            <img src={icon} style={{ maxWidth: 70, maxHeight: 60 }} alt="" />
+          <Box
+            sx={{
+              flex: 1,
+              display: "flex",
+              alignItems: "center",
+              marginLeft: { xs: "-60px", sm: "0" },
+            }}
+          >
+            <img
+              style={{ width: "120px", height: "120px" }}
+              src={icon}
+              alt=""
+            />
           </Box>
           <Box sx={{ flex: 1 }}>
             <Typography variant="h3">
-              <CountUp end={value} duration={10} enableScrollSpy prefix="+" />
+              <CountUp
+                end={value}
+                duration={10}
+                enableScrollSpy
+                prefix="+"
+                formattingFn={(number) => number.toLocaleString()}
+              />
             </Typography>
             <Typography variant="h5">{label}</Typography>
           </Box>
