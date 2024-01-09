@@ -87,7 +87,7 @@ export default function AboutSection() {
               em busca das <b>melhores oportunidades</b> para gerar valor aos
               produtos dos nossos clientes, oferecendo{" "}
               <b>conhecimento, suporte</b> e <b>novas ferramentas</b> para uma{" "}
-              <b>cafeicultura progressista</b> e <b>sustentável.</b>
+              <b>cafeicultura de progresso</b> e <b>sustentável.</b>
             </Typography>
           </Box>
           <Box
