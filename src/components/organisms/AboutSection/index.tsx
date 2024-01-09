@@ -42,7 +42,7 @@ export default function AboutSection() {
     {
       name: "Nélia Maria de Faria",
       image: Nelia,
-      jobTitle: "Sócia-proprietária, Diretora de Projetos.",
+      jobTitle: "Sócia-proprietária, Diretora de Gestão de Processos e Sustentabilidade.",
       description:
         "Desde a infância, é apaixonada pelo campo e a administração rural. Filha de cafeicultor, aos 21 anos, formou em Bacharel em Ciências Contábeis com o intuito de auxiliar na gestão da fazenda de seus pais e de alguns clientes da área rural, onde já se via a necessidade de um aprimoramento na Gestão Socioambiental. Logo, buscou entender mais sobre a cafeicultura, cursando Técnico em Cafeicultura e aprimorando com especializações em Sistemas de Gestão, formando em: Auditora Líder em Gestão de Qualidade, Gestão Ambiental, Auditora Interna de  Responsabilidade Social e Diretrizes para Auditoria em Sistemas de Gestão. No final de 2020, começou a trabalhar como Auditora Líder da norma Rainforest Alliance. Em 2023, Nélia se integrou na sociedade da Mundo Novo Café, onde coloca sua experiência para o campo, buscando novos desafios e continuando sua missão de apoio e desenvolvimento na Gestão Rural.",
     },

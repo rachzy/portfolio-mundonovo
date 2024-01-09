@@ -10,28 +10,23 @@ import EmailIcon from "../../../assets/images/icons/e-mail.png";
 export default function Footer() {
   const addresses: IAddress[] = [
     {
-      title: "Serra da Canastra:",
-      description: [
-        "Avenida Padre Murilo de Almeida Conceição, 249 - Loja 1",
-        "Centro - São Roque de Minas/MG ",
-        "CEP 37928-000",
-        "37 9 9964-7717"
-      ],
-    },
-    {
-      title: "Cerrado Mineiro",
-      description: [
-        "Patrocínio, MG",
-        "34 9 9948-5118"
-      ],
-    },
-    {
-      title: "Sudoeste de Minas I Alta Mogiana:",
+      title: "Matriz - Sudoeste de Minas I Alta Mogiana:",
       description: [
         "Avenida Oliveira Rezende, 1097 ",
         "Vila Operária - São Sebastião do Paraíso/MG",
         "CEP 37.950-282",
-        "35 9 9901-1125"
+      ],
+    },
+    {
+      title: "Unidade - Cerrado Mineiro:",
+      description: ["Patrocínio, MG"],
+    },
+    {
+      title: "Unidade - Serra da Canastra:",
+      description: [
+        "Avenida Padre Murilo de Almeida Conceição, 249 - Loja 1",
+        "Centro - São Roque de Minas/MG ",
+        "CEP 37928-000",
       ],
     },
   ];
