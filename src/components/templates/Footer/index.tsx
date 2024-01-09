@@ -19,14 +19,14 @@ export default function Footer() {
     },
     {
       title: "Unidade - Cerrado Mineiro:",
-      description: ["Patrocínio, MG"],
+      description: ["Patrocínio/MG"],
     },
     {
       title: "Unidade - Serra da Canastra:",
       description: [
         "Avenida Padre Murilo de Almeida Conceição, 249 - Loja 1",
         "Centro - São Roque de Minas/MG ",
-        "CEP 37928-000",
+        "CEP 37.928-000",
       ],
     },
   ];

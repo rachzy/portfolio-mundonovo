@@ -58,7 +58,7 @@ export default function AboutSection() {
       name: "WINICIUS BAQUIÃO DUTRA",
       image: Winicius,
       jobTitle:
-        "Sócio-proprietário, Diretor Comercial e Gestão de Processos e Qualidade.",
+        "Sócio-proprietário, Diretor Comercial e de Qualidade de Cafés.",
       description:
         "Graduado em Agronomia, é Agricultor e Produtor Rural, sendo a 5ª geração da cafeicultura da família. Sempre morou na fazenda, auxiliando seu pai nas atividades e na gestão, contribuindo em importantes tomadas de decisões. Winicius, também, é Técnico em Administração, Provador e Classificador de Cafés. Assim como os outros sócios, também, é apaixonado por café e direciona, na Mundo Novo, a parte de negociações, sendo, também, um dos fundadores da empresa.",
     },
