@@ -10,12 +10,10 @@ export default function Video() {
         marginY: 8,
       }}
     >
-      <Paper sx={{ width: "80%" }} elevation={24}>
+      <Paper sx={{ width: "80%", height: "515px" }} elevation={24}>
         <iframe
-          style={{ width: "100%" }}
-          width="560"
-          height="515"
-          src={"//www.youtube.com/watch?v=NCVpvfdfre4"}
+          style={{ width: "100%", height: "100%" }}
+          src={"//www.youtube.com/embed/NCVpvfdfre4"}
           allowFullScreen
         ></iframe>
       </Paper>
