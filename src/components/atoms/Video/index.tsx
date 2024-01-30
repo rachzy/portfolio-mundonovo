@@ -10,7 +10,10 @@ export default function Video() {
         marginY: 8,
       }}
     >
-      <Paper sx={{ width: "80%", height: "515px" }} elevation={24}>
+      <Paper
+        sx={{ width: "80%", height: { xs: "150px", sm: "515px" } }}
+        elevation={24}
+      >
         <iframe
           style={{ width: "100%", height: "100%" }}
           src={"//www.youtube.com/embed/NCVpvfdfre4"}
