@@ -19,7 +19,11 @@ export default function Footer() {
     },
     {
       title: "Unidade - Cerrado Mineiro:",
-      description: ["Patrocínio/MG"],
+      description: [
+        "Cassimiro Santos, 621",
+        "Centro - Patrocínio/MG",
+        "CEP 38.740-060",
+      ],
     },
     {
       title: "Unidade - Serra da Canastra:",
@@ -34,7 +38,7 @@ export default function Footer() {
   const contacts: IContact[] = [
     {
       icon: InstagramIcon,
-      href: "https://www.instagram.com/mundonovogncafe/",
+      href: "https://www.instagram.com/mundonovocafeoficial",
     },
     {
       icon: FacebookIcon,
