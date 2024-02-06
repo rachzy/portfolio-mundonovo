@@ -33,6 +33,12 @@ export default function Footer() {
         "CEP 37.928-000",
       ],
     },
+    {
+      title: "Telefone:",
+      description: [
+        "35 3390 0117"
+      ]
+    }
   ];
 
   const contacts: IContact[] = [
